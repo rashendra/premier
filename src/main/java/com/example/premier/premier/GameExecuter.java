@@ -1,29 +1,52 @@
 package com.example.premier.premier;
 
+import java.util.Scanner;
+
 public class GameExecuter {
 
-    public static Integer executeGame(int numberOfChildren, int k) {
-        ChildCircle childCircle = new ChildCircle(numberOfChildren);
-        int index = 1;
+    public static Child executeGame(int n, int k) {
+        ChildCircle childCircle = new ChildCircle(n);
+
+        int indexOffset;
+        // number of times which will execute n-1
         while (!childCircle.hasAWinner()) {
-            index = manageCurrentIndex(k, childCircle, index);
+            indexOffset = getIndexOffset(k, childCircle);
+            childCircle.removeChild(indexOffset);
         }
         return childCircle.getWinner();
     }
 
-    private static int manageCurrentIndex(Integer k, ChildCircle childCircle, int index) {
-        if (index == k) {
-            childCircle.removeCurrent();
-            index = 1;
+    public static int getIndexOffset(int k, ChildCircle childCircle) {
+        int indexOffset;
+        int numberOfChildren = childCircle.getNumberOfChildren();
+        if (k >= numberOfChildren) {
+            indexOffset = k - (numberOfChildren % k);
         } else {
-            childCircle.moveNext();
-            index++;
+            indexOffset = k % numberOfChildren;
         }
-        return index;
+        return indexOffset;
     }
 
     public static void main(String[] args) {
-        System.out.println("This is the winner: " + executeGame(4, 5));
+
+        System.out.println("Enter the list of share prices below ( Cmd + d / Ctrl+ d to exit)");
+        System.out.print("Enter value for K :");
+        try (Scanner scanner = new Scanner(System.in)) {
+            while (scanner.hasNextLine()) {
+                Integer k = Integer.parseInt(scanner.nextLine().trim());
+                System.out.print("Enter number of children :");
+                Integer n = Integer.parseInt(scanner.nextLine().trim());
+                System.out.println("K and n "+k+" & "+n);
+                Child winner = executeGame(n, k);
+                System.out.println("Winner's : id " +
+                        winner.getId()+" and Name : "+winner.getName());
+                System.out.println("Continue with a new value for K :");
+
+            }
+
+        }
+
+
     }
 
 

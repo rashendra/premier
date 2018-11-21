@@ -5,35 +5,32 @@ import java.util.List;
 
 public class ChildCircle {
 
-    private List<Integer> children = new ArrayList<>();
+    private List<Child> children = new ArrayList<>();
 
     private int currentIndex = 0;
-    private int numberOfChildren;
 
     public ChildCircle(Integer numberOfChildren) {
         for (int i = 1; i <= numberOfChildren; i++) {
-            children.add(new Integer(i));
+            children.add(new Child(i,"Name_"+i));
         }
     }
 
-    public void removeCurrent() {
+    public void removeChild(int numberOfShifts) {
+        setIndexToRemove(numberOfShifts);
         this.children.remove(this.currentIndex);
         this.currentIndex = this.currentIndex + 1 > children.size() ? 0 : this.currentIndex;
     }
 
-    public void moveNext() {
-        if (this.currentIndex + 1 < children.size()) {
-            this.currentIndex++;
-        } else {
-            this.currentIndex = 0;
-        }
+    public void setIndexToRemove(int numberOfShifts) {
+        int indexToRemove = this.currentIndex + numberOfShifts;
+        this.currentIndex = indexToRemove > getNumberOfChildren()? (indexToRemove-1)% getNumberOfChildren():indexToRemove-1;
     }
 
     public int getCurrentElement() {
-        return this.children.get(this.currentIndex);
+        return this.children.get(this.currentIndex).getId();
     }
 
-    public Integer getWinner() {
+    public Child getWinner() {
         return this.children.get(0);
     }
 
@@ -41,7 +38,11 @@ public class ChildCircle {
         return currentIndex;
     }
 
-    public List<Integer> getChildren() {
+    public int getNumberOfChildren() {
+        return children.size();
+    }
+
+    public List<Child> getChildren() {
         return children;
     }
 
