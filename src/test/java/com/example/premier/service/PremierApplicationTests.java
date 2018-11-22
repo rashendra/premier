@@ -1,4 +1,4 @@
-package com.example.premier.premier;
+package com.example.premier.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

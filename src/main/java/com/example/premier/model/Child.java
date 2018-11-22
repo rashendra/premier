@@ -1,4 +1,4 @@
-package com.example.premier.premier;
+package com.example.premier.model;
 
 public class Child {
 	private Integer id;

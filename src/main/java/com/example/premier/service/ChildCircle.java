@@ -1,4 +1,6 @@
-package com.example.premier.premier;
+package com.example.premier.service;
+
+import com.example.premier.model.Child;
 
 import java.util.ArrayList;
 import java.util.List;
