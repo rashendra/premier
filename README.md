@@ -28,6 +28,9 @@ That will prompt below allowing user to set value for K and N
     Please set values for K and N( Cmd + d / Ctrl+ d to exit)
     Enter value for K :
     Enter number of children (n) :
+    Winner's : id 7 and Name : Name_7
+    Continue with a new value for K :
+
     
 
 
