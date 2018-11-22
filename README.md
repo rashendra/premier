@@ -21,9 +21,9 @@ Go to the project root directory and run following commands
     once build , just execute the .jar file from the project root folder
     java -jar build/libs/premier-0.0.1-SNAPSHOT.jar
     
-alternatively once build, you can execute the main method of 
+Alternatively once build, you can execute the main method of 
     com.example.premier.premier.PremierApplication.java. 
-That will prompt below allowing user to set value for K and N 
+This application will read from the standard input. It will prompt below allowing user to set value for K and N
 
     Please set values for K and N( Cmd + d / Ctrl+ d to exit)
     Enter value for K :

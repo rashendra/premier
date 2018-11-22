@@ -19,7 +19,7 @@ public class ChildCircleTest {
 		int numberOfChildren = 17;
 		childCircle = new ChildCircle(numberOfChildren);
 		// Then
-		Assertions.assertThat(childCircle.getChildren().size() == 17).isTrue();
+		Assertions.assertThat(childCircle.getNumberOfChildren() == 17).isTrue();
 	}
 
 	@Test
@@ -38,38 +38,6 @@ public class ChildCircleTest {
 		childCircle.removeChild(1);
 		//Then
 		Assertions.assertThat(childCircle.getCurrentElementId() == 2).isTrue();
-	}
-
-	@Test
-	public void shouldSetTheIndexWhenTheIndexToRemoveIsGreaterThanNumberOfChildren() {
-		// Given
-		childCircle = new ChildCircle(8);
-		//When
-		childCircle.setIndexToRemove(11);
-		// Then
-		Assertions.assertThat(childCircle.getCurrentIndex() == 2).isTrue();
-
-	}
-
-	@Test
-	public void shouldSetTheIndexToLastElementWhenTheIndexToRemoveIsEqualToNumberOfChildren() {
-		// Given
-		childCircle = new ChildCircle(5);
-		//When
-		childCircle.setIndexToRemove(5);
-		// Then
-		Assertions.assertThat(childCircle.getCurrentIndex() == 4).isTrue();
-
-	}
-
-	@Test
-	public void shouldSetTheIndexWhenTheIndexToRemoveIsLessThanNumberOfChildren() {
-		// Given  K<n
-		childCircle = new ChildCircle(8);
-		//When
-		childCircle.setIndexToRemove(5);
-		// Then
-		Assertions.assertThat(childCircle.getCurrentIndex() == 4).isTrue();
 	}
 
 	@Test

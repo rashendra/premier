@@ -23,7 +23,7 @@ public class ChildCircle {
 		this.currentIndex = this.currentIndex + 1 > children.size() ? 0 : this.currentIndex;
 	}
 
-	public void setIndexToRemove(int numberOfShifts) {
+	private void setIndexToRemove(int numberOfShifts) {
 		int indexToRemove = this.currentIndex + numberOfShifts;
 		this.currentIndex = indexToRemove > getNumberOfChildren() ? (indexToRemove - 1) % getNumberOfChildren() : indexToRemove - 1;
 	}
@@ -42,10 +42,6 @@ public class ChildCircle {
 
 	public int getNumberOfChildren() {
 		return this.children.size();
-	}
-
-	public List<Child> getChildren() {
-		return this.children;
 	}
 
 	public boolean hasAWinner() {
