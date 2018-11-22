@@ -13,7 +13,7 @@ public class ChildCircle {
 
 	public ChildCircle(Integer numberOfChildren) {
 		for (int i = 1; i <= numberOfChildren; i++) {
-			children.add(new Child(i, "Name_" + i));
+			this.children.add(new Child(i, "Name_" + i));
 		}
 	}
 
@@ -37,15 +37,15 @@ public class ChildCircle {
 	}
 
 	public int getCurrentIndex() {
-		return currentIndex;
+		return this.currentIndex;
 	}
 
 	public int getNumberOfChildren() {
-		return children.size();
+		return this.children.size();
 	}
 
 	public List<Child> getChildren() {
-		return children;
+		return this.children;
 	}
 
 	public boolean hasAWinner() {
