@@ -18,10 +18,12 @@ Technologies/ Libraries used
 Go to the project root directory and run following commands
 ###### To build the application
     ./gradlew build    or just gradle build
+    once build , just execute the .jar file from the project root folder
+    java -jar build/libs/premier-0.0.1-SNAPSHOT.jar
     
-once build, execute the main method of 
-com.example.premier.premier.PremierApplication.java. That will prompt 
-below allowing user to set value for K and N 
+alternatively once build, you can execute the main method of 
+    com.example.premier.premier.PremierApplication.java. 
+That will prompt below allowing user to set value for K and N 
 
     Enter the list of share prices below ( Cmd + d / Ctrl+ d to exit)
     Enter value for K :
