@@ -33,17 +33,17 @@ That will prompt below allowing user to set value for K and N
 
 User should enter a valid values for the K and N. No validations has been applied in this scenario.
 # Data structures used 
-    In the example I have used a simple List to hold the children. 
-    I have used a model Child, only to hold an id and a name. This can be eliminated and reduced 
+    * In the example I have used a simple List to hold the children. 
+    * I have used a model Child, only to hold an id and a name. This can be eliminated and reduced 
     for a List<Integer> to improve memory. 
 
 # Runtime order complexity 
-    The above progarm will loop exactly n-1 times until there is only one element/child left in the list. 
-    Main benefit would be, regardless of the value we set for K, this will not loop more than n-1 times.
-    So the run time compleplexity for this would be O(n-1) when n is the number of children.
-    This program would, calculate the number of shifts required in the ArrayList and will eliminate the designated element 
+    * The above progarm will loop exactly n-1 times until there is only one element/child left in the list. 
+    * Main benefit would be, regardless of the value we set for K, this will not loop more than n-1 times.
+    * So the run time compleplexity for this would be O(n-1) when n is the number of children.
+    * This program would, calculate the number of shifts required in the ArrayList and will eliminate the designated element 
     without iterating over all the element.
-    This will benefit specially when the value for K is much larger than n 
+    * This will benefit specially when the value for K is much larger than n 
 
 
 ## Further enhancements 
