@@ -15,7 +15,7 @@ public class GameExecuteService {
 		return childCircle.getWinner();
 	}
 
-	public static int getIndexOffset(int k, ChildCircle childCircle) {
+	private static int getIndexOffset(int k, ChildCircle childCircle) {
 		int indexOffset;
 		int numberOfChildren = childCircle.getNumberOfChildren();
 		if (k >= numberOfChildren) {
