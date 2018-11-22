@@ -1,4 +1,4 @@
-package com.example.premier.model;
+package com.example.premier.service;
 
 import com.example.premier.service.ChildCircle;
 import org.assertj.core.api.Assertions;
