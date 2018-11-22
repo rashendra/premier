@@ -18,7 +18,7 @@ public class PremierApplication {
 				Integer k = Integer.parseInt(scanner.nextLine().trim());
 				System.out.print("Enter number of children (n) :");
 				Integer n = Integer.parseInt(scanner.nextLine().trim());
-				Child winner = GameExecuterService.executeGame(n, k);
+				Child winner = GameExecuteService.executeGame(n, k);
 				System.out.println("Winner's : id " +winner.getId() + " and Name : " + winner.getName());
 				System.out.println("Continue with a new value for K :");
 			}

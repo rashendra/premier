@@ -3,16 +3,14 @@ package com.example.premier.service;
 
 import com.example.premier.model.Child;
 
-public class GameExecuterService {
+public class GameExecuteService {
 
 	public static Child executeGame(int n, int k) {
 		ChildCircle childCircle = new ChildCircle(n);
 
-		int indexOffset;
 		// number of times which will execute n-1
 		while (!childCircle.hasAWinner()) {
-			indexOffset = getIndexOffset(k, childCircle);
-			childCircle.removeChild(indexOffset);
+			childCircle.removeChild(getIndexOffset(k, childCircle));
 		}
 		return childCircle.getWinner();
 	}
@@ -29,8 +27,6 @@ public class GameExecuterService {
 	}
 
 	public static void main(String[] args) {
-
-
 
 
 	}
