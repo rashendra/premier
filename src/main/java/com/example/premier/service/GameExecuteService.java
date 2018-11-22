@@ -26,10 +26,4 @@ public class GameExecuteService {
 		return indexOffset;
 	}
 
-	public static void main(String[] args) {
-
-
-	}
-
-
 }
