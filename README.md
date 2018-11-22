@@ -35,10 +35,11 @@ This application will read from the standard input. It will prompt below allowin
 
 
 User should enter a valid values for the K and N. No validations has been applied in this scenario.
-# Data structures used 
+# Data structures and useful information 
     * In the example I have used a simple List to hold the children. 
     * I have used a model Child, only to hold an id and a name. This can be eliminated and reduced 
     for a List<Integer> to improve memory. 
+    * Getters and setters are only define if there is any use.
 
 # Runtime order complexity 
     * The above progarm will loop exactly n-1 times until there is only one element/child left in the list. 
