@@ -23,6 +23,8 @@ public class PremierApplication {
 				System.out.println("Continue with a new value for K :");
 			}
 
+		} catch (Exception e) {
+			e.printStackTrace();// Will be using logger in enterprise scale
 		}
 	}
 }
