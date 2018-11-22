@@ -11,7 +11,7 @@ public class PremierApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PremierApplication.class, args);
-		System.out.println("Enter the list of share prices below ( Cmd + d / Ctrl+ d to exit)");
+		System.out.println("Please set values for K and N( Cmd + d / Ctrl+ d to exit)");
 		System.out.print("Enter value for K :");
 		try (Scanner scanner = new Scanner(System.in)) {
 			while (scanner.hasNextLine()) {

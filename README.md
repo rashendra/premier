@@ -25,9 +25,10 @@ alternatively once build, you can execute the main method of
     com.example.premier.premier.PremierApplication.java. 
 That will prompt below allowing user to set value for K and N 
 
-    Enter the list of share prices below ( Cmd + d / Ctrl+ d to exit)
+    Please set values for K and N( Cmd + d / Ctrl+ d to exit)
     Enter value for K :
     Enter number of children (n) :
+    
 
 
 User should enter a valid values for the K and N. No validations has been applied in this scenario.
