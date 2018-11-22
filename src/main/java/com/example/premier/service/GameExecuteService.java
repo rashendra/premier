@@ -16,14 +16,8 @@ public class GameExecuteService {
 	}
 
 	private static int getIndexOffset(int k, ChildCircle childCircle) {
-		int indexOffset;
 		int numberOfChildren = childCircle.getNumberOfChildren();
-		if (k >= numberOfChildren) {
-			indexOffset = k - (numberOfChildren % k);
-		} else {
-			indexOffset = k % numberOfChildren;
-		}
-		return indexOffset;
+		return (k >= numberOfChildren) ? (k - (numberOfChildren % k)) : (k % numberOfChildren);
 	}
 
 }
