@@ -18,7 +18,6 @@ Technologies/ Libraries used
 Go to the project root directory and run following commands
 ###### To build the application
     ./gradlew build    or just gradle build
-    Enter the list of share prices below ( Cmd + d / Ctrl+ d to exit)
     
 once build, execute the main method of 
 com.example.premier.premier.PremierApplication.java. That will prompt 
@@ -32,6 +31,8 @@ below allowing user to set value for K and N
 User should enter a valid values for the K and N. No validations has been applied in this scenario.
 # Data structures used 
     In the example I have used a simple List to hold the children. 
+    I have used a model Child, only to hold an id and a name. This can be eliminated and reduced 
+    for a List<Integer> to improve memory. 
 
 # Runtime order complexity 
     The above progarm will loop exactly n-1 times until there is only one element/child left in the list. 
