@@ -27,15 +27,17 @@ public class ChildCircleTest {
 		//Given
 		childCircle = new ChildCircle(17);
 		//Then
-		Assertions.assertThat(childCircle.getCurrentElement() == 1).isTrue();
+		Assertions.assertThat(childCircle.getCurrentElementId() == 1).isTrue();
 	}
 
 	@Test
-	public void shouldReturnTheFollowingElementAfterRemovingTheCurrent() {
+	public void shouldReturnTheNextElementAfterRemovingTheCurrent() {
 		//Given
 		childCircle = new ChildCircle(17);
+		//when
+		childCircle.removeChild(1);
 		//Then
-		Assertions.assertThat(childCircle.getCurrentElement() == 1).isTrue();
+		Assertions.assertThat(childCircle.getCurrentElementId() == 2).isTrue();
 	}
 
 	@Test

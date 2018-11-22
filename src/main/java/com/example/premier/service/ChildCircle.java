@@ -28,7 +28,7 @@ public class ChildCircle {
 		this.currentIndex = indexToRemove > getNumberOfChildren() ? (indexToRemove - 1) % getNumberOfChildren() : indexToRemove - 1;
 	}
 
-	public int getCurrentElement() {
+	public int getCurrentElementId() {
 		return this.children.get(this.currentIndex).getId();
 	}
 
