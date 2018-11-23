@@ -41,7 +41,7 @@ public class ChildCircleTest {
 	}
 
 	@Test
-	public void shouldRemoveChildForCalculatedIndexWhenKisLessThanN() {
+	public void shouldRemoveChildForCalculatedIndexWhenKIsLessThanN() {
 		// Given  K<n
 		childCircle = new ChildCircle(8);
 		//When
@@ -52,7 +52,7 @@ public class ChildCircleTest {
 	}
 
 	@Test
-	public void shouldRemoveChildForCalculatedIndexWhenKisGreaterThanN() {
+	public void shouldRemoveChildForCalculatedIndexWhenKIsGreaterThanN() {
 		// Given
 		// K= 14
 		// n= 3
