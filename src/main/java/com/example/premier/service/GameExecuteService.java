@@ -1,11 +1,15 @@
 package com.example.premier.service;
 
-
 import com.example.premier.model.Child;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class GameExecuteService {
 
+	private static Logger logger = LoggerFactory.getLogger(GameExecuteService.class);
+
 	public static Child executeGame(int n, int k) {
+		logger.info("Executing the game");
 		ChildCircle childCircle = new ChildCircle(n);
 
 		// number of times which will execute n-1
