@@ -30,7 +30,9 @@ This application will read from the standard input. It will prompt below allowin
     Enter number of children (n) :
     Winner's : id 7 and Name : Name_7
     Continue with a new value for K :
+The program will throw an error if non numeric values are set for the K or N values
 
+     Error while running the application :For input string: "A" Program terminated 
     
 
 
