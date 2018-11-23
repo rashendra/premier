@@ -30,7 +30,7 @@ public class PremierApplication {
 			}
 
 		} catch (Exception e) {
-			logger.error("Error while running the application :"+e.getMessage());
+			logger.error("Error while running the application :"+e.getMessage()+". Program terminated !");
 		}
 	}
 }
