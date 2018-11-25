@@ -1,5 +1,6 @@
-package com.example.premier.service;
+package com.example.premier.model;
 
+import com.example.premier.model.ChildCircle;
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;

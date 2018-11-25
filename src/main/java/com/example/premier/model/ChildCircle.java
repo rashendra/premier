@@ -1,4 +1,4 @@
-package com.example.premier.service;
+package com.example.premier.model;
 
 import com.example.premier.model.Child;
 
