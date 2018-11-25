@@ -5,13 +5,16 @@ import com.example.premier.model.Child;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChildCircle {
+public class ChildCircle implements  Game{
 
 	private List<Child> children = new ArrayList<>();
 
 	private int currentIndex = 0;
 
-	public ChildCircle(Integer numberOfChildren) {
+	public ChildCircle() {
+	}
+
+	public void initializeChildren(Integer numberOfChildren) {
 		for (int i = 1; i <= numberOfChildren; i++) {
 			this.children.add(new Child(i, "Name_" + i));
 		}

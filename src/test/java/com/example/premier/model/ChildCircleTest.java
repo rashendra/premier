@@ -1,6 +1,5 @@
 package com.example.premier.model;
 
-import com.example.premier.model.ChildCircle;
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +17,8 @@ public class ChildCircleTest {
 	public void shouldInitializeGivenNumberOfChildren() {
 		//Given
 		int numberOfChildren = 17;
-		childCircle = new ChildCircle(numberOfChildren);
+		childCircle = new ChildCircle();
+		childCircle.initializeChildren(numberOfChildren);
 		// Then
 		Assertions.assertThat(childCircle.getNumberOfChildren() == 17).isTrue();
 	}
@@ -26,7 +26,8 @@ public class ChildCircleTest {
 	@Test
 	public void shouldReturnTheCurrentElement() {
 		//Given
-		childCircle = new ChildCircle(17);
+		childCircle = new ChildCircle();
+		childCircle.initializeChildren(17);
 		//Then
 		Assertions.assertThat(childCircle.getCurrentElementId() == 1).isTrue();
 	}
@@ -34,7 +35,8 @@ public class ChildCircleTest {
 	@Test
 	public void shouldReturnTheNextElementAfterRemovingTheCurrent() {
 		//Given
-		childCircle = new ChildCircle(17);
+		childCircle = new ChildCircle();
+		childCircle.initializeChildren(17);
 		//when
 		childCircle.removeChild(1);
 		//Then
@@ -44,7 +46,8 @@ public class ChildCircleTest {
 	@Test
 	public void shouldRemoveChildForCalculatedIndexWhenKIsLessThanN() {
 		// Given  K<n
-		childCircle = new ChildCircle(8);
+		childCircle = new ChildCircle();
+		childCircle.initializeChildren(8);
 		//When
 		childCircle.removeChild(5);
 		// Them
@@ -57,7 +60,8 @@ public class ChildCircleTest {
 		// Given
 		// K= 14
 		// n= 3
-		childCircle = new ChildCircle(3);
+		childCircle = new ChildCircle();
+		childCircle.initializeChildren(3);
 		//When
 		childCircle.removeChild(11);
 		// Them
@@ -71,7 +75,8 @@ public class ChildCircleTest {
 		// Given
 		// K= 5
 		// n= 5
-		childCircle = new ChildCircle(5);
+		childCircle = new ChildCircle();
+		childCircle.initializeChildren(5);
 		//When
 		childCircle.removeChild(5);
 		// Them
