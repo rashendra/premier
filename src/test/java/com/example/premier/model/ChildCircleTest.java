@@ -29,7 +29,7 @@ public class ChildCircleTest {
 		childCircle = new ChildCircle();
 		childCircle.initializeChildren(17);
 		//Then
-		Assertions.assertThat(childCircle.getCurrentElementId() == 1).isTrue();
+		Assertions.assertThat(childCircle.getCurrentChildId() == 1).isTrue();
 	}
 
 	@Test
@@ -40,7 +40,7 @@ public class ChildCircleTest {
 		//when
 		childCircle.removeChild(1);
 		//Then
-		Assertions.assertThat(childCircle.getCurrentElementId() == 2).isTrue();
+		Assertions.assertThat(childCircle.getCurrentChildId() == 2).isTrue();
 	}
 
 	@Test

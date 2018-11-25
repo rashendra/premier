@@ -31,7 +31,7 @@ public class ChildCircle implements  Game{
 		this.currentIndex = indexToRemove > getNumberOfChildren() ? (indexToRemove - 1) % getNumberOfChildren() : indexToRemove - 1;
 	}
 
-	public int getCurrentElementId() {
+	public int getCurrentChildId() {
 		return this.children.get(this.currentIndex).getId();
 	}
 
